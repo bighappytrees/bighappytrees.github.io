@@ -20,6 +20,15 @@ html {
 
 .navbar-nav {
   height: 5rem;
-  background-color: orangered;
-  text-align: left;
+  background-color: rgb(18, 175, 223);
+  text-align: center;
+  padding: 1rem;
+}
+
+body {
+    padding: 1rem;
+}
+
+.container {
+    flex-direction: row;
 }
