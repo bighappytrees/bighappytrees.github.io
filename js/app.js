@@ -6,6 +6,16 @@ const helpText = document.querySelector('#helpText');
 
 let toggle = false;
 
+anime({
+  targets: '#helpText path',
+  strokeDashoffset: [anime.setDashoffset, 0],
+  easing: 'linear',
+  duration: 1000,
+  delay: function (el, i) { return i * 33 },
+  direction: 'alternate',
+  loop: false
+});
+
 // click on the sun
 darkMode.addEventListener('click', () => {
   // setup the timeline
@@ -17,22 +27,22 @@ darkMode.addEventListener('click', () => {
   timeline.add({
     targets: '.sun',
     d: [
-      {value: toggle ? moonPath : sunPath}
+      { value: toggle ? moonPath : sunPath }
     ]
   })
-  .add({
-    targets: '#darkMode',
-    rotate: '1turn'
-  }, '-=600')
-  .add({
-    targets: 'section',
-    backgroundColor: toggle ? 'rgb(255,255,255)' : 'rgb(22,22,22)',
-  }, '-=700');
+    .add({
+      targets: '#darkMode',
+      rotate: '1turn'
+    }, '-=600')
+    .add({
+      targets: 'section',
+      backgroundColor: toggle ? 'rgb(255,255,255)' : 'rgb(22,22,22)',
+    }, '-=700');
 
   // toggle logic
-  if(!toggle) {
+  if (!toggle) {
     toggle = true;
   } else {
     toggle = false;
   }
-});
+})
