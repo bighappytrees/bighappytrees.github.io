@@ -6,7 +6,7 @@ var darkMode = document.querySelector('#darkMode');
 var helpText = document.querySelector('#helpText');
 var toggle = false;
 anime({
-  targets: '#helpText path',
+  targets: '#headline path',
   strokeDashoffset: [anime.setDashoffset, 0],
   easing: 'linear',
   duration: 1000,
@@ -33,7 +33,7 @@ darkMode.addEventListener('click', function () {
     rotate: '1turn'
   }, '-=600').add({
     targets: 'section',
-    backgroundColor: toggle ? 'rgb(255,255,255)' : 'rgb(22,22,22)'
+    backgroundColor: toggle ? 'rgb(255,255,255)' : 'rgb(0,166,79)'
   }, '-=700'); // toggle logic
 
   if (!toggle) {
