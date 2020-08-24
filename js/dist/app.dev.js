@@ -33,7 +33,7 @@ darkMode.addEventListener('click', function () {
     rotate: '1turn'
   }, '-=600').add({
     targets: 'section',
-    backgroundColor: toggle ? 'rgb(255,255,255)' : 'rgb(0,166,79)'
+    backgroundColor: toggle ? 'rgb(202,247,219)' : 'rgb(0,150,143)'
   }, '-=700'); // toggle logic
 
   if (!toggle) {
