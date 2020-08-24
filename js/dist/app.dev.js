@@ -9,12 +9,12 @@ anime({
   targets: '#headline path',
   strokeDashoffset: [anime.setDashoffset, 0],
   easing: 'linear',
-  duration: 1000,
+  duration: 500,
   delay: function delay(el, i) {
     return i * 33;
   },
   direction: 'alternate',
-  loop: false
+  loop: true
 }); // click on the sun
 
 darkMode.addEventListener('click', function () {
